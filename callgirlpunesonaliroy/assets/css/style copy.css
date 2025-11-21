@@ -1,0 +1,214 @@
+.feature-cta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* adds space between buttons */
+  flex-wrap: nowrap;
+  /* keeps them side-by-side always */
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+  /* prevents text wrapping inside button */
+  margin-left: 10px;
+}
+
+/* Colors */
+.tel-btn {
+  background: #12c002;
+  color: #fff;
+}
+
+.wa-btn {
+  background: #12c002;
+  color: #fff;
+}
+
+/* Optional: Slightly shrink text/icons on smaller screens */
+@media (max-width: 600px) {
+  .cta {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .cta img {
+    width: 20px;
+  }
+}
+
+/* Outer card styling */
+.listing {
+  margin: 20px;
+  /* margin from top and sides */
+  border: 2px solid #e0e0e0;
+  /* subtle border */
+  border-radius: 15px;
+  /* rounded corners */
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Image inside card */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* maintain aspect ratio */
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+/* Hover effect */
+.listing:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.listing:hover .card-img-top {
+  transform: scale(1.05);
+  /* zoom image on hover */
+}
+
+/* Overlay text */
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.5);
+  /* semi-transparent overlay */
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.listing:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .listing {
+    margin: 15px auto;
+    /* center on small screens */
+    width: 90%;
+  }
+
+  .overlay-text {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .listing {
+    width: 400px;
+    /* force same width as laptop */
+    margin: 20px auto;
+    /* keep margin top/bottom and centered */
+  }
+
+  .card-img-top {
+    height: 612px;
+    /* same as original height */
+    object-fit: cover;
+    /* ensures image fills the card */
+  }
+
+  .overlay-text {
+    font-size: 14px;
+    /* keep same size as laptop */
+    padding: 10px 12px;
+  }
+}
+
+
+/* Container for listing text */
+.listing-text-container {
+  padding: 20px;
+  /* spacing around text */
+  background-color: #1a1a1a;
+  /* dark card background */
+  border: 1px solid #333;
+  /* subtle border for card */
+  border-radius: 12px;
+  /* rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  /* shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 600px;
+  /* optional for readability */
+  margin: 20px auto;
+  /* center on page */
+}
+
+/* Hover effect */
+.listing-text-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* Title styling */
+.listing-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.listing-title a {
+  text-decoration: none;
+  color: #f0f0f0;
+  /* light text for dark background */
+  transition: color 0.3s ease;
+}
+
+.listing-title a:hover {
+  color: #12c002;
+  /* highlight color on hover */
+}
+
+/* Paragraph styling */
+.listing-text {
+  font-size: 16px;
+  color: #ccc;
+  /* slightly lighter for readability */
+  line-height: 1.7;
+  margin: 0;
+  max-height: 150px;
+  /* optional uniform height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .listing-text-container {
+    padding: 15px;
+  }
+
+  .listing-title {
+    font-size: 18px;
+  }
+
+  .listing-text {
+    font-size: 14px;
+  }
+}
